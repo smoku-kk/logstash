@@ -3,6 +3,7 @@
 
 This section summarizes the changes in the following releases:
 
+* <<logstash-7-3-0,Logstash 7.3.0>>
 * <<logstash-7-1-1,Logstash 7.1.1>>
 * <<logstash-7-1-0,Logstash 7.1.0>>
 * <<logstash-7-0-1,Logstash 7.0.1>>
@@ -12,6 +13,184 @@ This section summarizes the changes in the following releases:
 * <<logstash-7-0-0-beta1,Logstash 7.0.0-beta1>>
 * <<logstash-7-0-0-alpha2,Logstash 7.0.0-alpha2>>
 * <<logstash-7-0-0-alpha1,Logstash 7.0.0-alpha1>>
+
+[[logstash-7-3-0]]
+=== Logstash 7.3.0 Release Notes
+
+---------- DELETE FROM HERE ------------
+=== Logstash Pull Requests with label v7.3.0
+
+* Enhance GET _node/stats/pipelines API for Metricbeat monitoring https://github.com/elastic/logstash/pull/10576[#10576]
+* Plain codec for Java https://github.com/elastic/logstash/pull/10791[#10791]
+* field_refefence: handle illegal field references in converted maps https://github.com/elastic/logstash/pull/10839[#10839]
+* Clean up pipeline-to-pipeline code https://github.com/elastic/logstash/pull/10840[#10840]
+* Add workers and batch_size to root request https://github.com/elastic/logstash/pull/10853[#10853]
+* Add Logstash JMS input to the list of default plugins https://github.com/elastic/logstash/pull/10865[#10865]
+* Fixes pipeline shutdown ordering with p2p operator https://github.com/elastic/logstash/pull/10872[#10872]
+* Do not shut down API webserver until after pipelines have been shut down https://github.com/elastic/logstash/pull/10880[#10880]
+* Restore UUID lookup to node https://github.com/elastic/logstash/pull/10884[#10884]
+* Inject hash and ephemeral_id into stats https://github.com/elastic/logstash/pull/10885[#10885]
+* Update Reflections library to work with Java 11 https://github.com/elastic/logstash/pull/10951[#10951]
+* Change version of Logstash containing GA version of Java plugin API https://github.com/elastic/logstash/pull/10964[#10964]
+* make sure joni regexp interruptability is enabled https://github.com/elastic/logstash/pull/10978[#10978]
+
+=== Logstash Commits between 7.3 and 7.2.0
+
+Computed with "git log --pretty=format:'%h -%d %s (%cr) <%an>' --abbrev-commit --date=relative v7.2.0..7.3"
+
+e4f996c38 - (HEAD -> 7.3, upstream/7.3) Docs: Add more missing subs for asciidoctor (#10991) (3 hours ago) <Nik Everett>
+e1b53df45 - update lock file for 7.3.0 (#10985) (24 hours ago) <Ry Biesemeyer>
+f01e696ec - update Jinja2 docker dependency (25 hours ago) <Ry Biesemeyer>
+0e6be02cf - make sure joni regexp interruptability is enabled (2 days ago) <Colin Surprenant>
+8b477a5d8 - Incorporate review comments (2 days ago) <Karen Metts>
+d2feb30bb - Prepare core plugin docs for inclusion in LS ref (2 days ago) <Karen Metts>
+95940b6de - Fix include path (6 days ago) <DeDe Morton>
+87a223574 - remove extra brace from end of example command (8 days ago) <Dan Hermann>
+285f730cb - Update Reflections library (8 days ago) <Dan Hermann>
+f8e43c64f - Change version of Logstash containing GA version of Java plugin API (8 days ago) <Dan Hermann>
+f3c419b22 - Fix formatting for nested version attributes (12 days ago) <Karen Metts>
+b0ba6aefa - Document running Logstash on Windows (#10805) (12 days ago) <Rob Waight>
+246c3928a - [7.3 clean backport of #10934] logstash-input-twitter as a default plugin (#10952) (12 days ago) <Colin Surprenant>
+54b5455af - fix plugin version bump rake task (12 days ago) <Joao Duarte>
+4d3b2f3c3 - Cleanup gradle tasks and dependency installation (13 days ago) <Joao Duarte>
+c98563189 - Update minor plugin versions in gemfile lock for 7.3.0 (#10928) (3 weeks ago) <João Duarte>
+f04197f8b - import lock file from 7.2 (3 weeks ago) <Joao Duarte>
+67bddcee1 - disable testInvalidInputPlugin (3 weeks ago) <Joao Duarte>
+5e8a694d5 - simplify unit test (4 weeks ago) <Dan Hermann>
+46c1611df - use method-level ensure blocks (4 weeks ago) <Dan Hermann>
+1802869d8 - remote != remove (4 weeks ago) <Dan Hermann>
+e925b4c48 - don't put nulls in the map (4 weeks ago) <Dan Hermann>
+f48da1e46 - add missing lock statement (4 weeks ago) <Dan Hermann>
+0ff6d1134 - don't perform long-running pipeline actions inside calls to ConcurrentHashMap.compute to avoid deadlocks (4 weeks ago) <Dan Hermann>
+d1e92862c - serialize access to PipelineBus methods on a per-plugin basis, code cleanup in AddressState (4 weeks ago) <Dan Hermann>
+7d206b78d - Fix pipeline shutdown ordering (4 weeks ago) <Dan Hermann>
+ec07b43a5 - Add java example plugins to skiplist (4 weeks ago) <Karen Metts>
+2e3254d83 - docs for the Java UUID filter (4 weeks ago) <Dan Hermann>
+241d8b68b - docs for java_generator input (4 weeks ago) <Dan Hermann>
+6669e2bd1 - docs for java stdin input (4 weeks ago) <Dan Hermann>
+82f3b3cb7 - docs for java stdout output (4 weeks ago) <Dan Hermann>
+f280f48f8 - docs for Java sink output (4 weeks ago) <Dan Hermann>
+df4ffd589 - docs for java dots codec (4 weeks ago) <Dan Hermann>
+df7c7d07d - docs for Java line codec (4 weeks ago) <Dan Hermann>
+25b291e54 - docs for Java plain codec (4 weeks ago) <Dan Hermann>
+357ce1339 - Inject hash and ephemeral_id into stats (#10885) (#10918) (4 weeks ago) <Mike Place>
+beb0a337f - remove gcs output from skip list (4 weeks ago) <Joao Duarte>
+ed57c5dc5 - Inject hash and ephemeral_id into stats (4 weeks ago) <Mike Place>
+20fc46551 - Add workers and batch_size to root request (#10853) (#10910) (4 weeks ago) <Mike Place>
+c91808261 - Restore UUID lookup to node (#10884) (#10911) (4 weeks ago) <Mike Place>
+9a5faf24b - Enhance GET _node/stats/pipelines API for Metricbeat monitoring (#10576) (#10909) (4 weeks ago) <Mike Place>
+d03c0f14a - Remove debug code for p2p plus formatting (4 weeks ago) <Dan Hermann>
+8a048ccc2 - Do not shut down API webserver until after pipelines have been shut down (4 weeks ago) <Dan Hermann>
+5e970fe57 - remove the beta designation from the docs for Java plugins (4 weeks ago) <Dan Hermann>
+369f8e80d - Add homebrew as installation option (5 weeks ago) <Karen Metts>
+48c581b6f - Add Logstash JMS input to the list of default plugins (5 weeks ago) <Rob Bavey>
+f18992c64 - avoid clashes between Environment class methods (6 weeks ago) <Joao Duarte>
+a1e806d2c - Add details about Elastic Search dependency (6 weeks ago) <Jeff>
+b519dc1e1 - fix parsing of boolean options provided to Java plugins (7 weeks ago) <Dan Hermann>
+b76ea1989 - field_refefence: handle illegal field references in converted maps (7 weeks ago) <Ry Biesemeyer>
+9f30ea281 - Remove note about j11 (7 weeks ago) <Karen Metts>
+58dbda45f - Value of start_timestamp must to be quoted (8 weeks ago) <Florian Kelbert>
+8a2b7be32 - plain codec for Java (8 weeks ago) <Dan Hermann>
+6dd85ca2a - Fixes unit test failures on some runs of ConfigCompilerTest::testComplexConfigToPipelineIR (8 weeks ago) <Dan Hermann>
+8685d1d48 - Merge config values in LIR (8 weeks ago) <Dan Hermann>
+3d8482717 - name rpm/deb oss packages as logstash-oss (8 weeks ago) <Joao Duarte>
+78607d2bb - LIR support for octal literals in pipeline definitions (8 weeks ago) <Dan Hermann>
+682c050f1 - release notes for 7.1.1 (8 weeks ago) <Joao Duarte>
+cac98642c - Release notes for 7.1.0 (#10796) (8 weeks ago) <Karen Metts>
+2646be8d2 - Release notes for 7.0.1 (#10705) (8 weeks ago) <Logstash Machine>
+bd11485e0 - fix plugin doc version generation with default plugins (8 weeks ago) <Joao Duarte>
+d03f0ea45 - allow skipping docker artifacts during artifact:all (8 weeks ago) <Joao Duarte>
+089f36903 - generate tarballs for docker images (9 weeks ago) <Joao Duarte>
+ce0237b62 - Update doc versions for 7.x (#10817) (9 weeks ago) <Karen Metts>
+016f7318d - Bump version to 7.3.0 (#10815) (9 weeks ago) <Rob Bavey>
+
+=== Logstash Plugin Release Changelogs ===
+Computed from "git diff v7.2.0..7.3 *.release"
+Changed plugin versions:
+logstash-filter-grok: 4.0.4 -> 4.1.0
+logstash-filter-http: 1.0.1 -> 1.0.2
+logstash-filter-jdbc_streaming: 1.0.6 -> 1.0.7
+logstash-filter-json: 3.0.6 -> 3.1.0
+logstash-filter-kv: 4.3.1 -> 4.4.0
+logstash-filter-memcached: 1.0.0 -> 1.0.1
+logstash-filter-mutate: 3.4.0 -> 3.5.0
+logstash-filter-useragent: 3.2.3 -> 3.2.4
+logstash-input-azure_event_hubs: 1.1.1 -> 1.1.2
+logstash-input-kafka: 9.0.0 -> 9.0.1
+logstash-input-jms: 3.1.1 -> 3.1.1
+logstash-input-snmp: 1.1.0 -> 1.2.0
+logstash-input-tcp: 6.0.2 -> 6.0.3
+logstash-input-twitter: 4.0.0 -> 4.0.1
+logstash-output-elastic_app_search: 1.0.0 -> 1.0.0
+logstash-output-kafka: 8.0.1 -> 8.0.2
+---------- DELETE UP TO HERE ------------
+
+==== Plugins
+
+*Grok Filter*
+
+* Changed timeout handling using the Timeout class [#147](https://github.com/logstash-plugins/logstash-filter-grok/pull/147)
+
+*Http Filter*
+
+*Jdbc_streaming Filter*
+
+* Fixed formatting in documentation [#17](https://github.com/logstash-plugins/logstash-filter-jdbc_streaming/pull/17) and [#28](https://github.com/logstash-plugins/logstash-filter-jdbc_streaming/pull/28) 
+
+*Json Filter*
+
+* Added better error handling, preventing some classes of malformed inputs from crashing the pipeline.
+
+*Kv Filter*
+
+* Changed timeout handling using the Timeout class [#84](https://github.com/logstash-plugins/logstash-filter-kv/pull/84)
+
+* Fixed asciidoc formatting in docs
+
+* Resolved potential race condition in pipeline shutdown where the timeout enforcer could be shut down while work was still in-flight, potentially leading to stuck pipelines.
+* Resolved potential race condition in pipeline shutdown where work could be submitted to the timeout enforcer after it had been shutdown, potentially leading to stuck pipelines.
+
+*Memcached Filter*
+
+* Fixed link formatting issues in doc [#16](https://github.com/logstash-plugins/logstash-filter-memcached/pull/16)
+
+*Mutate Filter*
+
+*Useragent Filter*
+
+* Added support for OS regular expressions that use backreferences [#59](https://github.com/logstash-plugins/logstash-filter-useragent/pull/59)
+
+*Azure_event_hubs Input*
+
+* Added workaround to fix errors when using this plugin with Java 11[#38](https://github.com/logstash-plugins/logstash-input-azure_event_hubs/pull/38)
+
+*Kafka Input*
+
+* Added support for `sasl_jaas_config` setting to allow JAAS config per plugin, rather than per JVM [#313](https://github.com/logstash-plugins/logstash-input-kafka/pull/313)
+
+*Jms Input*
+
+*Snmp Input*
+
+* Adding oid_path_length config option [#59] (https://github.com/logstash-plugins/logstash-input-snmp/pull/59)
+* Fixing bug with table support removing index value from OIDs [#60] )https://github.com/logstash-plugins/logstash-input-snmp/issues/60)
+
+* Added information and other improvements to documentation [#57](https://github.com/logstash-plugins/logstash-input-snmp/pull/57)
+
+*Tcp Input*
+
+* Skip empty lines while reading certificate files [#144](https://github.com/logstash-plugins/logstash-input-tcp/issues/144)
+
+*Twitter Input*
+
+* Updated Twitter gem to v6.2.0, cleaned up obsolete monkey patches, fixed integration tests [#63](https://github.com/logstash-plugins/logstash-input-twitter/pull/63)
+
+*Elastic_app_search Output*
+
+*Kafka Output*
+
+* Added support for `sasl_jaas_config` setting to allow JAAS config per plugin, rather than per JVM [#223](https://github.com/logstash-plugins/logstash-output-kafka/pull/223)
+
 
 [[logstash-7-1-1]]
 === Logstash 7.1.1 Release Notes
