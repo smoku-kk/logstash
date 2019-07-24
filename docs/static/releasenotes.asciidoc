@@ -3,6 +3,7 @@
 
 This section summarizes the changes in the following releases:
 
+* <<logstash-7-3-0,Logstash 7.3.0>>
 * <<logstash-7-1-1,Logstash 7.1.1>>
 * <<logstash-7-1-0,Logstash 7.1.0>>
 * <<logstash-7-0-1,Logstash 7.0.1>>
@@ -12,6 +13,37 @@ This section summarizes the changes in the following releases:
 * <<logstash-7-0-0-beta1,Logstash 7.0.0-beta1>>
 * <<logstash-7-0-0-alpha2,Logstash 7.0.0-alpha2>>
 * <<logstash-7-0-0-alpha1,Logstash 7.0.0-alpha1>>
+
+[[logstash-7-3-0]]
+=== Logstash 7.3.0 Release Notes
+
+---------- DELETE FROM HERE ------------
+=== Logstash Pull Requests with label v7.3.0
+
+* Enhance GET _node/stats/pipelines API for Metricbeat monitoring https://github.com/elastic/logstash/pull/10576[#10576]
+* Plain codec for Java https://github.com/elastic/logstash/pull/10791[#10791]
+* field_refefence: handle illegal field references in converted maps https://github.com/elastic/logstash/pull/10839[#10839]
+* Clean up pipeline-to-pipeline code https://github.com/elastic/logstash/pull/10840[#10840]
+* Add workers and batch_size to root request https://github.com/elastic/logstash/pull/10853[#10853]
+* Add Logstash JMS input to the list of default plugins https://github.com/elastic/logstash/pull/10865[#10865]
+* Fixes pipeline shutdown ordering with p2p operator https://github.com/elastic/logstash/pull/10872[#10872]
+* Do not shut down API webserver until after pipelines have been shut down https://github.com/elastic/logstash/pull/10880[#10880]
+* Restore UUID lookup to node https://github.com/elastic/logstash/pull/10884[#10884]
+* Inject hash and ephemeral_id into stats https://github.com/elastic/logstash/pull/10885[#10885]
+* Update Reflections library to work with Java 11 https://github.com/elastic/logstash/pull/10951[#10951]
+* Change version of Logstash containing GA version of Java plugin API https://github.com/elastic/logstash/pull/10964[#10964]
+* make sure joni regexp interruptability is enabled https://github.com/elastic/logstash/pull/10978[#10978]
+
+=== Logstash Commits between 7.3 and 7.2.1
+
+Computed with "git log --pretty=format:'%h -%d %s (%cr) <%an>' --abbrev-commit --date=relative v7.2.1..7.3"
+
+=== Logstash Plugin Release Changelogs ===
+Computed from "git diff v7.2.1..7.3 *.release"
+Changed plugin versions:
+---------- DELETE UP TO HERE ------------
+
+==== Plugins
 
 [[logstash-7-1-1]]
 === Logstash 7.1.1 Release Notes
